@@ -12,7 +12,7 @@ const [
 ] = pkgJson.repository?.url?.split('github.com/')?.[1]?.split('.git')?.[0]?.split('/') || []
 
 if (!userName || !repoName) {
-	throw new Error('请在 package.json 中配置 repository 字段')
+	throw new Error('请在 package.json 中配置 repository.url 字段')
 }
 
 getRepoReadme(userName, repoName).then(res=>{
