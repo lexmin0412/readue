@@ -16,6 +16,6 @@ if (!userName || !repoName) {
 }
 
 getRepoReadme(userName, repoName).then(res=>{
-	console.log(`README 内容如下:
+	console.log(`${userName}/${repoName} 的 README 内容如下:
 ${res}`)
 })
