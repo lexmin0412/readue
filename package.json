@@ -1,0 +1,34 @@
+{
+	"name": "readue",
+	"version": "0.0.0",
+	"description": "",
+	"main": "./lib/index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "pnpm --filter=@readue/* run build",
+		"ts": "ts-node src/",
+		"ci:version": "lerna version patch --yes --conventional-commits --create-release github",
+		"ci:publish": "lerna publish from-package --yes"
+	},
+	"keywords": [],
+	"author": "lexmin0412 <zhangle_dev@outlook.com>",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "^20.12.7",
+		"lerna": "^8.1.2",
+		"rimraf": "^5.0.5",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.4.5"
+	},
+	"files": [
+		"es",
+		"lib"
+	],
+	"types": "./lib/index.d.ts",
+	"jsnext:main": "./es/index.js",
+	"module": "./es/index.js",
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org/",
+		"access": "public"
+	}
+}

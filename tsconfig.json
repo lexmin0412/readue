@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "lib": [
+			"ES2022"
+    ],
+		"target" : "ES2022",
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true
+  },
+  "includes": [
+    "src/*"
+  ]
+}

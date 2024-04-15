@@ -1,0 +1,56 @@
+{
+	"name": "@readue/cli",
+	"version": "0.0.0",
+	"description": "> TODO: description",
+	"bin": {
+		"readue": "./bin/readue.js",
+		"ru": "./bin/readue.js"
+	},
+	"author": {
+		"name": "lexmin0412",
+		"email": "zhangle_dev@outlook.com",
+		"url": "https://github.com/lexmin0412"
+	},
+	"homepage": "https://github.com/lexmin0412/readue#readme",
+	"license": "ISC",
+	"main": "./lib/index.js",
+	"directories": {
+		"lib": "lib",
+		"test": "__tests__"
+	},
+	"files": [
+		"es",
+		"lib"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/lexmin0412/readue.git"
+	},
+	"scripts": {
+		"test": "node ./__tests__/cli.test.js",
+		"build:commonjs": "rimraf lib && tsc --target es5 --outDir lib --module commonjs --declaration",
+		"build:es": "rimraf es && tsc --target es6 --outDir es --module es6",
+		"build": "npm run build:commonjs && npm run build:es",
+		"ts": "ts-node src/",
+		"prepublishOnly": "npm run build"
+	},
+	"publishConfig": {
+		"registry": "https://registry.npmjs.org/",
+		"access": "public"
+	},
+	"bugs": {
+		"url": "https://github.com/lexmin0412/readu/issues"
+	},
+	"devDependencies": {
+		"@types/node": "^20.12.7",
+		"rimraf": "^5.0.5",
+		"ts-node": "^10.9.2",
+		"typescript": "^5.4.5"
+	},
+	"types": "./lib/index.d.ts",
+	"jsnext:main": "./es/index.js",
+	"module": "./es/index.js",
+	"dependencies": {
+		"@toolkit-fe/request": "^0.1.22"
+	}
+}
