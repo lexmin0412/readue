@@ -1,6 +1,6 @@
 {
 	"name": "readue",
-	"version": "0.0.6",
+	"version": "0.0.7",
 	"description": "README 生成器。",
 	"main": "./lib/index.js",
 	"scripts": {
