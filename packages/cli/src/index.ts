@@ -38,6 +38,24 @@ packages.forEach(item => {
 	readmeLines.push(`|[${subPkgJson.name}](https://www.npmjs.com/package/${subPkgJson.name})|![version](https://img.shields.io/npm/v/${subPkgJson.name})  ![downloads-month](https://img.shields.io/npm/dm/${subPkgJson.name})|${subPkgJson.description}|`)
 })
 
+// 追加 Star History
+
+// 获取 git 用户名 + 仓库名
+const reg = /git\+https:\/\/github\.com\/(.*?)\.git/g
+// 替换为 https://github.com/lexmin0412/readue
+let gitUrl = pkgJson.repository?.url || ''
+if (reg.test(gitUrl)) {
+	gitUrl = gitUrl.replace(reg, '$1')
+}
+
+readmeLines = [
+	...readmeLines,
+	'',
+	'## Star History',
+	'',
+	`[![Star History Chart](https://api.star-history.com/svg?repos=${gitUrl}&type=Timeline)](https://star-history.com/#${gitUrl}&Timeline)`
+]
+
 // 写到 当前目录的 README.md 中
 fs.writeFileSync(path.resolve(process.cwd(), 'README.md'), readmeLines.join('\n'))
 
