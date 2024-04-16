@@ -1,39 +1,39 @@
 {
-	"name": "readue",
-	"version": "0.0.7",
-	"description": "README 生成器。",
-	"main": "./lib/index.js",
-	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "pnpm --filter=@readue/* run build",
-		"ts": "ts-node src/",
-		"ci:version": "lerna version patch --yes --conventional-commits --create-release github",
-		"ci:publish": "lerna publish from-package --yes"
-	},
-	"keywords": [],
-	"author": "lexmin0412 <zhangle_dev@outlook.com>",
-	"license": "ISC",
-	"devDependencies": {
-		"@eat-fish/changelog": "^1.0.5",
-		"@types/node": "^20.12.7",
-		"lerna": "^8.1.2",
-		"rimraf": "^5.0.5",
-		"ts-node": "^10.9.2",
-		"typescript": "^5.4.5"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/lexmin0412/readue.git"
-	},
-	"files": [
-		"es",
-		"lib"
-	],
-	"types": "./lib/index.d.ts",
-	"jsnext:main": "./es/index.js",
-	"module": "./es/index.js",
-	"publishConfig": {
-		"registry": "https://registry.npmjs.org/",
-		"access": "public"
-	}
+  "name": "readue",
+  "version": "0.0.8",
+  "description": "README 生成器。",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "pnpm --filter=@readue/* run build",
+    "ts": "ts-node src/",
+    "ci:version": "lerna version patch --yes --conventional-commits --create-release github",
+    "ci:publish": "lerna publish from-package --yes"
+  },
+  "keywords": [],
+  "author": "lexmin0412 <zhangle_dev@outlook.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@eat-fish/changelog": "^1.0.5",
+    "@types/node": "^20.12.7",
+    "lerna": "^8.1.2",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lexmin0412/readue.git"
+  },
+  "files": [
+    "es",
+    "lib"
+  ],
+  "types": "./lib/index.d.ts",
+  "jsnext:main": "./es/index.js",
+  "module": "./es/index.js",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  }
 }

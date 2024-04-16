@@ -1,3 +1,10 @@
+# Changelog
+
+## [v0.0.8](https://github.com/lexmin0412/readue/compare/v0.0.7...v0.0.8)
+
+### 🚀 Feature
+
+- [41ff2da](https://github.com/lexmin0412/readue/commit/41ff2da5b74218b950c1d1bbe724af415a56180b) 新增分步执行日志输出 @***lexmin0412***
 # Change Log
 
 All notable changes to this project will be documented in this file.
