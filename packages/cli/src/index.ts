@@ -1,21 +1,44 @@
 import * as path from 'path'
 import * as fs from 'fs'
-import { getRepoReadme } from './utils'
 
 const content = fs.readFileSync(path.resolve(process.cwd(), 'package.json')).toString()
 
 const pkgJson = JSON.parse(content)
 
-const [
-	userName,
-	repoName
-] = pkgJson.repository?.url?.split('github.com/')?.[1]?.split('.git')?.[0]?.split('/') || []
+// 扫描目录获取 packages 列表
+const packages = fs.readdirSync(path.resolve(process.cwd(), './packages'))
 
-if (!userName || !repoName) {
-	throw new Error('请在当前目录的 package.json 中配置 repository.url 字段')
+let readmeLines = [
+	// 标题
+  `# ${pkgJson.name}`,
+	'',
+	// 描述
+	`${pkgJson.description}`,
+	''
+]
+
+// 根据 列表生成 README.md 中的信息
+
+if (packages?.length) {
+	readmeLines = [
+		...readmeLines,
+		// 标题
+		'## Packages',
+		'',
+		'|子包|信息|说明|',
+		'|---|---|---|',
+	]
 }
 
-getRepoReadme(userName, repoName).then(res=>{
-	console.log(`${userName}/${repoName} 的 README 内容如下:
-${res}`)
+packages.forEach(item => {
+	// 读取子目录
+	const subDir = path.resolve(process.cwd(), `./packages/${item}`)
+	// 读取 目录下的 package.json
+	const subPkgJson = JSON.parse(fs.readFileSync(path.resolve(subDir, 'package.json')).toString())
+	readmeLines.push(`|[${subPkgJson.name}](https://www.npmjs.com/package/${subPkgJson.name})|![version](https://img.shields.io/npm/v/${subPkgJson.name})  ![downloads-month](https://img.shields.io/npm/dm/${subPkgJson.name})|${subPkgJson.description}|`)
 })
+
+// 写到 当前目录的 README.md 中
+fs.writeFileSync(path.resolve(process.cwd(), 'README.md'), readmeLines.join('\n'))
+
+console.log('README.md 生成完毕 ✅')
