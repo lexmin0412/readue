@@ -48,15 +48,20 @@ if (reg.test(gitUrl)) {
 	gitUrl = gitUrl.replace(reg, '$1')
 }
 
-readmeLines = [
-	...readmeLines,
-	'',
-	'## Star History',
-	'',
-	`[![Star History Chart](https://api.star-history.com/svg?repos=${gitUrl}&type=Timeline)](https://star-history.com/#${gitUrl}&Timeline)`
-]
+if (gitUrl) {
+	readmeLines = [
+		...readmeLines,
+		'',
+		'## Star History',
+		'',
+		`[![Star History Chart](https://api.star-history.com/svg?repos=${gitUrl}&type=Timeline)](https://star-history.com/#${gitUrl}&Timeline)`
+	]
+} else {
+	console.warn('[Warning] 当前 package.json 中没有配置完整的 repository 字段，将跳过 Star History 生成')
+}
+
 
 // 写到 当前目录的 README.md 中
 fs.writeFileSync(path.resolve(process.cwd(), 'README.md'), readmeLines.join('\n'))
 
-console.log('README.md 生成完毕 ✅')
+console.log('[Success] README.md 生成完毕 ✅')
