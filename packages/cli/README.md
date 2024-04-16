@@ -1,11 +1,15 @@
-# `cli`
+# @readue/cli
 
-> TODO: description
+Readue 的命令行接口。
 
-## Usage
+## 安装
 
 ```
-const cli = require('cli');
+npm install @readue/cli -g
+```
 
-// TODO: DEMONSTRATE API
+## 使用
+
+```bash
+readue
 ```
