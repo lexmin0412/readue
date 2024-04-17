@@ -6,6 +6,8 @@ README 生成器。
 
 |子包|信息|说明|
 |---|---|---|
+|[@readue/api](https://www.npmjs.com/package/@readue/api)|![version](https://img.shields.io/npm/v/@readue/api)  ![downloads-month](https://img.shields.io/npm/dm/@readue/api)|Readue 的 Node API|
+|[@readue/app](https://www.npmjs.com/package/@readue/app)|![version](https://img.shields.io/npm/v/@readue/app)  ![downloads-month](https://img.shields.io/npm/dm/@readue/app)|undefined|
 |[@readue/cli](https://www.npmjs.com/package/@readue/cli)|![version](https://img.shields.io/npm/v/@readue/cli)  ![downloads-month](https://img.shields.io/npm/dm/@readue/cli)|命令行接口|
 
 ## Star History
@@ -48,7 +50,7 @@ module.exports = {
 
 按照上面配置输出的 README 文件：
 
-> 本仓库为 readue 的示例仓库，实际输出结果根据因仓库内容而异，但大体结构保持一致。
+> 本仓库为 readue 的示例仓库，实际输出结果因仓库内容而异，但大体结构保持一致。
 
 ```markdown
 # readue
