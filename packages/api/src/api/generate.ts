@@ -51,11 +51,11 @@ export const generate4SinglePkg = (pkgJson: Record<string, unknown>) => {
  * 生成 Monorepo 的 README 内容
  * @param pkgJson 仓库的 package.json 内容
  */
-export const generate4Monorepo = (pkgJson: Record<string, any>) => {
+export const generate4Monorepo = (pkgJson: Record<string, any>, cwd: string) => {
 	let readmeLines = generateBaseInfo(pkgJson);
 
 	// 扫描目录获取 packages 列表
-	const packages = fs.readdirSync(path.resolve(process.cwd(), "./packages"));
+	const packages = fs.readdirSync(path.resolve(cwd, "./packages"));
 
 	// 根据 列表生成 README.md 中的信息
 
@@ -73,7 +73,7 @@ export const generate4Monorepo = (pkgJson: Record<string, any>) => {
 
 	packages.forEach((item) => {
 		// 读取子目录
-		const subDir = path.resolve(process.cwd(), `./packages/${item}`);
+		const subDir = path.resolve(cwd, `./packages/${item}`);
 		// 读取 目录下的 package.json
 		const subPkgJson = JSON.parse(
 			fs.readFileSync(path.resolve(subDir, "package.json")).toString()

@@ -51,6 +51,7 @@
 	"jsnext:main": "./es/index.js",
 	"module": "./es/index.js",
 	"dependencies": {
+		"@readue/api": "workspace:*",
 		"@toolkit-fe/request": "^0.1.22"
 	}
 }

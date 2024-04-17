@@ -1,17 +1,17 @@
 import * as path from 'path'
 import * as fs from 'fs'
-import { generate4Monorepo, generate4SinglePkg, writeReadme } from './utils'
+import { generate4Monorepo, generate4SinglePkg, isMonorepo } from '@readue/api'
+import { writeReadme } from './utils'
 
 const content = fs.readFileSync(path.resolve(process.cwd(), 'package.json')).toString()
 
 const pkgJson = JSON.parse(content)
 
-// 简单判断，当存在 pnpm-workspace.yaml 文件时，则认为是 monorepo
-const isMonorepo = fs.existsSync(path.resolve(process.cwd(), 'pnpm-workspace.yaml'))
+
 
 const genContent = () => {
-	if (isMonorepo) {
-		return generate4Monorepo(pkgJson)
+	if (isMonorepo(process.cwd())) {
+		return generate4Monorepo(pkgJson, process.cwd())
 	} else {
 		return generate4SinglePkg(pkgJson)
 	}
