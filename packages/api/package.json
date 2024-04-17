@@ -1,7 +1,7 @@
 {
   "name": "@readue/api",
   "version": "0.1.0",
-  "description": "Readue 的 Node API",
+  "description": "Readue Node API",
   "keywords": [
     "readue"
   ],

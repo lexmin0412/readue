@@ -6,9 +6,9 @@ README 生成器。
 
 |子包|信息|说明|
 |---|---|---|
-|[@readue/api](https://www.npmjs.com/package/@readue/api)|![version](https://img.shields.io/npm/v/@readue/api)  ![downloads-month](https://img.shields.io/npm/dm/@readue/api)|Readue 的 Node API|
-|[@readue/app](https://www.npmjs.com/package/@readue/app)|![version](https://img.shields.io/npm/v/@readue/app)  ![downloads-month](https://img.shields.io/npm/dm/@readue/app)|undefined|
-|[@readue/cli](https://www.npmjs.com/package/@readue/cli)|![version](https://img.shields.io/npm/v/@readue/cli)  ![downloads-month](https://img.shields.io/npm/dm/@readue/cli)|命令行接口|
+|[@readue/api](https://www.npmjs.com/package/@readue/api)|![version](https://img.shields.io/npm/v/@readue/api)  ![downloads-month](https://img.shields.io/npm/dm/@readue/api)|Readue Node API|
+|[@readue/app](https://www.npmjs.com/package/@readue/app)|![version](https://img.shields.io/npm/v/@readue/app)  ![downloads-month](https://img.shields.io/npm/dm/@readue/app)|Readue App, 提供 Readue 的可视化界面|
+|[@readue/cli](https://www.npmjs.com/package/@readue/cli)|![version](https://img.shields.io/npm/v/@readue/cli)  ![downloads-month](https://img.shields.io/npm/dm/@readue/cli)|Readue 命令行接口|
 
 ## Star History
 

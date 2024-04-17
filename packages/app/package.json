@@ -1,5 +1,6 @@
 {
   "name": "@readue/app",
+	"description": "Readue App, 提供 Readue 的可视化界面",
   "version": "0.1.0",
   "private": true,
   "scripts": {
