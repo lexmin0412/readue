@@ -1,6 +1,6 @@
 {
   "name": "@readue/api",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Readue Node API",
   "keywords": [
     "readue"
@@ -18,8 +18,8 @@
     "lib"
   ],
   "publishConfig": {
-		"access": "public",
-		"registry": "https://registry.npmjs.org"
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
   },
   "repository": {
     "type": "git",
