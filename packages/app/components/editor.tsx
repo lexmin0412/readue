@@ -67,14 +67,14 @@ export default function Editor(props: EditorProps) {
 				/>
 			</div>
 			<button
-				className="mt-5 mx-auto border w-20 rounded h-8 leading-8"
+				className="mt-8 mx-auto border w-20 rounded h-8 leading-8"
 				onClick={handleClick}
 			>
 				生成
 			</button>
-			<div className="flex items-start mt-5">
+			<div className="flex items-start mt-8">
 				<span>内容：</span>
-				<textarea className="text-black outline-none p-2 rounded inline-block w-[50vw] h-96" ref={contentRef} />
+				<textarea className="text-black outline-none p-2 rounded inline-block w-[60vw] h-[60vh]" ref={contentRef} />
 			</div>
 		</div>
 	);
