@@ -7,6 +7,7 @@
 		"test:self": "pnpm build && readue",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "pnpm --filter=@readue/* run build",
+		"dev:app": "pnpm --filter=@readue/app run dev",
     "ts": "ts-node src/",
     "ci:version": "lerna version patch --yes --conventional-commits --create-release github",
     "ci:publish": "lerna publish from-package --yes"
