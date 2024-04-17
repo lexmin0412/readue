@@ -9,7 +9,7 @@
     "build": "pnpm --filter=@readue/* run build",
 		"dev:app": "pnpm --filter=@readue/app run dev",
     "ts": "ts-node src/",
-    "ci:version": "lerna version patch --yes --conventional-commits --create-release github",
+    "ci:version": "lerna version patch --yes --conventional-commits",
     "ci:publish": "lerna publish from-package --yes"
   },
   "keywords": [],
