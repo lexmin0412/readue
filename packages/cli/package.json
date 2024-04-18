@@ -52,6 +52,7 @@
 	"module": "./es/index.js",
 	"dependencies": {
 		"@readue/api": "workspace:*",
+		"@readue/config": "workspace:*",
 		"@toolkit-fe/request": "^0.1.22"
 	}
 }
