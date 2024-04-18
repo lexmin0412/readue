@@ -9,6 +9,7 @@ README 生成器。
 |[@readue/api](https://www.npmjs.com/package/@readue/api)|![version](https://img.shields.io/npm/v/@readue/api)  ![downloads-month](https://img.shields.io/npm/dm/@readue/api)|Readue Node API|
 |[@readue/app](https://www.npmjs.com/package/@readue/app)|![version](https://img.shields.io/npm/v/@readue/app)  ![downloads-month](https://img.shields.io/npm/dm/@readue/app)|Readue App, 提供 Readue 的可视化界面|
 |[@readue/cli](https://www.npmjs.com/package/@readue/cli)|![version](https://img.shields.io/npm/v/@readue/cli)  ![downloads-month](https://img.shields.io/npm/dm/@readue/cli)|Readue 命令行接口|
+|[@readue/config](https://www.npmjs.com/package/@readue/config)|![version](https://img.shields.io/npm/v/@readue/config)  ![downloads-month](https://img.shields.io/npm/dm/@readue/config)|Readue 的配置包|
 
 ## Star History
 
