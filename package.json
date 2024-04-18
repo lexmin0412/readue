@@ -4,6 +4,7 @@
   "description": "README 生成器。",
   "main": "./lib/index.js",
   "scripts": {
+		"new:pkg": "lerna create",
 		"test:self": "pnpm build && readue",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "pnpm --filter=@readue/* run build",
