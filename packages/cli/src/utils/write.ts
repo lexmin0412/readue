@@ -24,12 +24,19 @@ export const writeReadme = (newLines: string[]) => {
 	// 读取配置文件
 	// const config = require(path.resolve(process.cwd(), './readue/config.js'))
 	// 检查配置文件是否存在
-	const configFilePath = path.resolve(process.cwd(), "./.readue/config.js");
-	console.log("configFilePath", configFilePath);
-	const isConfigFileExist = fs.existsSync(configFilePath);
-	if (!isConfigFileExist) {
+	// const configFilePath = path.resolve(process.cwd(), "./.readue/config.js");
+	const configFilePath = [
+		'./.readue/config.js',
+		'./.readue/config.cjs'
+	].map(item=>{
+		return path.resolve(process.cwd(), item)
+	}).find((item) => {
+		return fs.existsSync(item)
+	})
+	if (!configFilePath) {
 		console.log("配置文件不存在，将使用默认配置");
 	} else {
+		console.log('读取配置文件', configFilePath)
 		// 存在则读取内容与默认配置合并
 		const customConfig = require(configFilePath);
 		config = {
