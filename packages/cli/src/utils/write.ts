@@ -1,7 +1,7 @@
 import * as path from "path";
 import * as fs from "fs";
 import { ReadueConfig } from "../types";
-import { DEFAULT_INSERT_PLACEHOLDER } from "../constants";
+import { DEFAULT_INSERT_PLACEHOLDER, SUPPORTED_FILE_NAMES, getDefaultConfig, WRITE_MODE } from '@readue/config';
 
 export const writeReadme = (newLines: string[]) => {
 	/**
@@ -15,21 +15,19 @@ export const writeReadme = (newLines: string[]) => {
 		console.log("[Success] README.md 生成完毕 ✅");
 	};
 
-	let config: ReadueConfig = {
-		mode: "cover",
-		templateFile: path.resolve(process.cwd(), "./readue/template.md"),
-		outputFile: path.resolve(process.cwd(), "./README.md"),
-	};
+	let config: ReadueConfig = getDefaultConfig()
 
-	// 读取配置文件
-	// const config = require(path.resolve(process.cwd(), './readue/config.js'))
-	// 检查配置文件是否存在
-	const configFilePath = path.resolve(process.cwd(), "./.readue/config.js");
-	console.log("configFilePath", configFilePath);
-	const isConfigFileExist = fs.existsSync(configFilePath);
-	if (!isConfigFileExist) {
+	const checkFiles = SUPPORTED_FILE_NAMES.map((item)=>{
+		return path.resolve(process.cwd(), './.readue', item)
+	})
+
+	const configFilePath = checkFiles.find((item) => {
+		return fs.existsSync(item)
+	})
+	if (!configFilePath) {
 		console.log("配置文件不存在，将使用默认配置");
 	} else {
+		console.log('读取配置文件', configFilePath)
 		// 存在则读取内容与默认配置合并
 		const customConfig = require(configFilePath);
 		config = {
@@ -55,7 +53,7 @@ export const writeReadme = (newLines: string[]) => {
 		}
 	}
 
-	if (config.mode === "cover" || !fs.existsSync(config.templateFile)) {
+	if (config.mode === WRITE_MODE.COVER || !fs.existsSync(config.templateFile)) {
 		// 如果是覆盖模式或者模板文件不存在，则直接写入内容
 		writeFile(newLines);
 		return;
