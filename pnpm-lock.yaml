@@ -40,7 +40,7 @@ importers:
   packages/api:
     dependencies:
       '@readue/config':
-        specifier: workspace:^
+        specifier: workspace:*
         version: link:../config
     devDependencies:
       '@types/node':
