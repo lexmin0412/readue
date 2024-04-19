@@ -24,10 +24,7 @@ export const writeReadme = (newLines: string[]) => {
 	const configFilePath = checkFiles.find((item) => {
 		return fs.existsSync(item)
 	})
-	if (!configFilePath) {
-		console.log("配置文件不存在，将使用默认配置");
-	} else {
-		console.log('读取配置文件', configFilePath)
+	if (configFilePath) {
 		// 存在则读取内容与默认配置合并
 		const customConfig = require(configFilePath);
 		config = {
@@ -62,7 +59,6 @@ export const writeReadme = (newLines: string[]) => {
 	// 否则处理内容插入
 	const existedContent = fs.readFileSync(config.templateFile, "utf-8");
 	const lines = existedContent.split("\n");
-	console.log("lines", lines);
 	// 在已存在内容中找到占位符，替换为生成的内容
 	const placeholderIndex = lines.findIndex((line) =>
 		line.includes(config.insertPlaceholder || DEFAULT_INSERT_PLACEHOLDER)

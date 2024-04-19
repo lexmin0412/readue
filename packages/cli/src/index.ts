@@ -3,11 +3,13 @@ import * as fs from 'fs'
 import { generate4Monorepo, generate4SinglePkg, isMonorepo } from '@readue/api'
 import { writeReadme } from './utils'
 
+console.log(`
+[info] @readue/cli 启动
+`)
+
 const content = fs.readFileSync(path.resolve(process.cwd(), 'package.json')).toString()
 
 const pkgJson = JSON.parse(content)
-
-
 
 const genContent = () => {
 	if (isMonorepo(process.cwd())) {
@@ -21,3 +23,5 @@ const readmeLines = genContent()
 
 // 写到 当前目录的 README.md 中
 writeReadme(readmeLines)
+
+console.log('')
