@@ -4,11 +4,11 @@
   "description": "README 生成器。",
   "main": "./lib/index.js",
   "scripts": {
-		"new:pkg": "lerna create",
-		"test:self": "pnpm build && readue",
+    "new:pkg": "lerna create",
+    "test:self": "pnpm build && readue",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "pnpm --filter=@readue/* run build",
-		"dev:app": "pnpm --filter=@readue/app run dev",
+    "dev:app": "pnpm --filter=@readue/app run dev",
     "ts": "ts-node src/",
     "ci:version": "lerna version patch --yes --conventional-commits",
     "ci:publish": "lerna publish from-package --yes"
@@ -38,5 +38,10 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
+  },
+  "dependencies": {
+    "@readue/block-base_info": "workspace:*",
+    "@readue/block-packages": "workspace:*",
+    "@readue/block-star_history": "workspace:*"
   }
 }

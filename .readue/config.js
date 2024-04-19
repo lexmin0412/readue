@@ -15,4 +15,15 @@ module.exports = {
 	 * 输出文件路径 - 相对路径
 	 */
 	outputFile: './../README.md',
+	/**
+	 * 自定义块配置
+	 */
+	blocks: {
+		type: 'custom',
+		list: [
+			"@readue/block-base_info",
+			"@readue/block-packages",
+			"@readue/block-star_history",
+		]
+	}
 }

@@ -7,6 +7,16 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@readue/block-base_info':
+        specifier: workspace:*
+        version: link:packages/block-base_info
+      '@readue/block-packages':
+        specifier: workspace:*
+        version: link:packages/block-packages
+      '@readue/block-star_history':
+        specifier: workspace:*
+        version: link:packages/block-star_history
     devDependencies:
       '@eat-fish/changelog':
         specifier: ^1.0.5
@@ -28,6 +38,10 @@ importers:
         version: 5.4.5
 
   packages/api:
+    dependencies:
+      '@readue/config':
+        specifier: workspace:^
+        version: link:../config
     devDependencies:
       '@types/node':
         specifier: ^20.12.7
@@ -83,6 +97,72 @@ importers:
         version: 3.4.3(ts-node@10.9.2)
       typescript:
         specifier: ^5
+        version: 5.4.5
+
+  packages/block-base_info:
+    dependencies:
+      '@readue/config':
+        specifier: workspace:^
+        version: link:../config
+    devDependencies:
+      '@types/node':
+        specifier: ^20.12.7
+        version: 20.12.7
+      pkg-types:
+        specifier: ^1.1.0
+        version: 1.1.0
+      rimraf:
+        specifier: ^5.0.5
+        version: 5.0.5
+      ts-node:
+        specifier: ^10.9.2
+        version: 10.9.2(@types/node@20.12.7)(typescript@5.4.5)
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+
+  packages/block-packages:
+    dependencies:
+      '@readue/config':
+        specifier: workspace:^
+        version: link:../config
+      pkg-types:
+        specifier: ^1.1.0
+        version: 1.1.0
+    devDependencies:
+      '@types/node':
+        specifier: ^20.12.7
+        version: 20.12.7
+      rimraf:
+        specifier: ^5.0.5
+        version: 5.0.5
+      ts-node:
+        specifier: ^10.9.2
+        version: 10.9.2(@types/node@20.12.7)(typescript@5.4.5)
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+
+  packages/block-star_history:
+    dependencies:
+      '@readue/config':
+        specifier: workspace:^
+        version: link:../config
+      pkg-types:
+        specifier: ^1.1.0
+        version: 1.1.0
+    devDependencies:
+      '@types/node':
+        specifier: ^20.12.7
+        version: 20.12.7
+      rimraf:
+        specifier: ^5.0.5
+        version: 5.0.5
+      ts-node:
+        specifier: ^10.9.2
+        version: 10.9.2(@types/node@20.12.7)(typescript@5.4.5)
+      typescript:
+        specifier: ^5.4.5
         version: 5.4.5
 
   packages/cli:
@@ -1145,7 +1225,6 @@ packages:
     resolution: {integrity: sha512-Y9rRfJG5jcKOE0CLisYbojUjIrIEE7AGMzA/Sm4BslANhbS+cDMpgBdcPT91oJ7OuJ9hYJBx59RjbhxVnrF8Xg==}
     engines: {node: '>=0.4.0'}
     hasBin: true
-    dev: true
 
   /add-stream@1.0.0:
     resolution: {integrity: sha512-qQLMr+8o0WC4FZGQTcJiKBVC59JylcPSrTtk6usvmIDFUOCKegapy1VHQwRbFMOFyb/inzUVqHs+eMYKDM1YeQ==}
@@ -1793,6 +1872,9 @@ packages:
       readable-stream: 3.6.2
       typedarray: 0.0.6
     dev: true
+
+  /confbox@0.1.7:
+    resolution: {integrity: sha512-uJcB/FKZtBMCJpK8MQji6bJHgu1tixKPxRLeGkNzBoOZzpnZUJm0jm2/sBDWcuBx1dYgxV4JU+g5hmNxCyAmdA==}
 
   /console-control-strings@1.1.0:
     resolution: {integrity: sha512-ty/fTekppD2fIwRvnZAVdeOiGd1c7YXEixbgJTNzqcxJWKQnjJ/V1bNEEE6hygpM3WjwHFUVK6HTjWSzV4a8sQ==}
@@ -4293,6 +4375,14 @@ packages:
     hasBin: true
     dev: true
 
+  /mlly@1.6.1:
+    resolution: {integrity: sha512-vLgaHvaeunuOXHSmEbZ9izxPx3USsk8KCQ8iC+aTlp5sKRSoZvwhHh5L9VbKSaVC6sJDqbyohIS76E2VmHIPAA==}
+    dependencies:
+      acorn: 8.11.3
+      pathe: 1.1.2
+      pkg-types: 1.1.0
+      ufo: 1.5.3
+
   /modify-values@1.0.1:
     resolution: {integrity: sha512-xV2bxeN6F7oYjZWTe/YPAy6MN2M+sL4u/Rlm2AHCIVGfo2p1yGmBHQ6vHehl4bRTZBdHu3TSkWdYgkwpYzAGSw==}
     engines: {node: '>=0.10.0'}
@@ -5030,6 +5120,9 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
+  /pathe@1.1.2:
+    resolution: {integrity: sha512-whLdWMYL2TwI08hn8/ZqAbrVemu0LNaNNJZX73O6qaIdCTfXutsLhMkjdENX0qhsQ9uIimo4/aQOmXkoon2nDQ==}
+
   /picocolors@1.0.0:
     resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
 
@@ -5069,6 +5162,13 @@ packages:
     dependencies:
       find-up: 4.1.0
     dev: true
+
+  /pkg-types@1.1.0:
+    resolution: {integrity: sha512-/RpmvKdxKf8uILTtoOhAgf30wYbP2Qw+L9p3Rvshx1JZVX+XQNZQFjlbmGHEGIm4CkVPlSn+NXmIM8+9oWQaSA==}
+    dependencies:
+      confbox: 0.1.7
+      mlly: 1.6.1
+      pathe: 1.1.2
 
   /possible-typed-array-names@1.0.0:
     resolution: {integrity: sha512-d7Uw+eZoloe0EHDIYoe+bQ5WXnGMOpmiZFTuMWCwpjzzkL2nTjcKiAk4hh8TjnGye2TwWOk3UXucZ+3rbmBa8Q==}
@@ -6264,6 +6364,9 @@ packages:
     engines: {node: '>=14.17'}
     hasBin: true
     dev: true
+
+  /ufo@1.5.3:
+    resolution: {integrity: sha512-Y7HYmWaFwPUmkoQCUIAYpKqkOf+SbVj/2fJJZ4RJMCfZp0rTGwRbzQD+HghfnhKOjL9E01okqz+ncJskGYfBNw==}
 
   /uglify-js@3.17.4:
     resolution: {integrity: sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==}
