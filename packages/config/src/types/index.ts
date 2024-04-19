@@ -15,4 +15,31 @@ export interface ReadueConfig {
 	 * 输出文件路径 - 相对与配置文件的路径
 	 */
 	outputFile: string
+	/**
+ * 块配置
+ */
+	blocks?: {
+		/**
+		 * 配置类型 default-默认配置 custom-自定义配置
+		 */
+		type: 'default' | "custom"
+		/**
+		 * 块列表
+		 */
+		list: string[]
+	}
+}
+
+/**
+ * 块函数
+ */
+export type ReadueBlockFunction = (readueConfig: ReadueConfig, pkgJson?: Record<string, unknown>) => {
+	/**
+		* 块名称
+		*/
+	name: string,
+	/**
+		* 块内容
+		*/
+	content: string[]
 }
