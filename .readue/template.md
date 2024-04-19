@@ -23,6 +23,23 @@ module.exports = {
 	 * 输出文件路径 - 相对路径
 	 */
 	outputFile: './../README.md',
+	/**
+	 * 自定义块配置
+	 */
+	blocks: {
+		/**
+		 * 开启自定义配置
+		 */
+		type: 'custom',
+		/**
+		 * 自定义块插件列表
+		 */
+		list: [
+			"@readue/block-base_info",
+			"@readue/block-packages",
+			"@readue/block-star_history",
+		]
+	}
 }
 ```
 

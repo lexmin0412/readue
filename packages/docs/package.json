@@ -1,0 +1,16 @@
+{
+  "name": "@readue/docs",
+  "version": "0.2.0",
+  "private": true,
+  "scripts": {
+    "dev": "rspress dev",
+    "build": "rspress build",
+    "preview": "rspress preview"
+  },
+  "dependencies": {
+    "rspress": "^0.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14"
+  }
+}
