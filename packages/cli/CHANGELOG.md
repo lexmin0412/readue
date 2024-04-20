@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.3 (2024-04-20)
+
+
+### Features
+
+* **docs:** 完成中文文档[介绍]篇 ([1322cfa](https://github.com/lexmin0412/readue/commit/1322cfaf98d350fa92b68c17a08851c69e1ff52e))
+
+
+
+
+
 ## 0.2.2 (2024-04-20)
 
 **Note:** Version bump only for package @readue/cli
