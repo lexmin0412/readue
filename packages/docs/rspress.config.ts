@@ -9,8 +9,8 @@ export default defineConfig({
   description: '一键生成你的项目 README 文档',
 	icon: "https://lexmin0412.github.io/readue/rspress-icon.png",
   logo: {
-		light: "https://lexmin0412.github.io/readue/rspress-light-logo.png",
-		dark: "https://lexmin0412.github.io/readue/rspress-dark-logo.png",
+		light: "https://lexmin.oss-cn-hangzhou.aliyuncs.com/statics/readue/logo.png",
+		dark: "https://lexmin.oss-cn-hangzhou.aliyuncs.com/statics/readue/logo.png",
   },
   themeConfig: {
 		locales: [
