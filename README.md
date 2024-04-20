@@ -13,6 +13,7 @@ README 生成器。
 |[@readue/block-star_history](https://www.npmjs.com/package/@readue/block-star_history)|![version](https://img.shields.io/npm/v/@readue/block-star_history)  ![downloads-month](https://img.shields.io/npm/dm/@readue/block-star_history)|Readue Star History 块插件|
 |[@readue/cli](https://www.npmjs.com/package/@readue/cli)|![version](https://img.shields.io/npm/v/@readue/cli)  ![downloads-month](https://img.shields.io/npm/dm/@readue/cli)|Readue 命令行接口|
 |[@readue/config](https://www.npmjs.com/package/@readue/config)|![version](https://img.shields.io/npm/v/@readue/config)  ![downloads-month](https://img.shields.io/npm/dm/@readue/config)|Readue 的配置包|
+|[@readue/docs](https://www.npmjs.com/package/@readue/docs)|![version](https://img.shields.io/npm/v/@readue/docs)  ![downloads-month](https://img.shields.io/npm/dm/@readue/docs)|Readue 文档|
 
 
 ## Star History
@@ -43,6 +44,23 @@ module.exports = {
 	 * 输出文件路径 - 相对路径
 	 */
 	outputFile: './../README.md',
+	/**
+	 * 自定义块配置
+	 */
+	blocks: {
+		/**
+		 * 开启自定义配置
+		 */
+		type: 'custom',
+		/**
+		 * 自定义块插件列表
+		 */
+		list: [
+			"@readue/block-base_info",
+			"@readue/block-packages",
+			"@readue/block-star_history",
+		]
+	}
 }
 ```
 
