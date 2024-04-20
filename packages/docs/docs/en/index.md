@@ -3,7 +3,7 @@ pageType: home
 
 hero:
   name: Readue
-  text: 一键生成你的项目 README 文档
+  text: One-Click README generator
   actions:
     - theme: brand
       text: Quick Start

@@ -3,10 +3,11 @@ pageType: home
 
 hero:
   name: Readue
-  text: 一键生成你的项目 README 文档
+  text: 一键生成 README
+  tagline: 简单、快速、灵活自定义
   actions:
     - theme: brand
-      text: Quick Start
+      text: 快速开始
       link: /guide/start/quick-start
     - theme: alt
       text: Github
@@ -15,22 +16,13 @@ hero:
     src: https://lexmin0412.github.io/readue/rspress-icon.png
     alt: Readue Logo
 features:
-  - title: Blazing fast build speed
-    details: The core compilation module is based on the Rust front-end toolchain, providing a more ultimate development experience.
-    icon: 🏃🏻‍♀️
-  - title: Support for MDX content writing
-    details: MDX is a powerful way to write content, allowing you to use React components in Markdown.
+  - title: 简单
+    details: 最少只需一次点击，即可快速生成 README，并提供 CLI、API、可视化界面等多种方式，满足你的一切使用场景。
     icon: 📦
-  - title: Built-in full-text search
-    details: Automatically generates a full-text search index for you during construction, providing out-of-the-box full-text search capabilities.
+  - title: 快速
+    details: 生成时间约等于你眨一次眼睛的时长。
+    icon: 🏃🏻‍♀️
+  - title: 灵活自定义
+    details: 提供多种内置块，积木式自定义你的 README 结构，更可快速开发自定义块插件。
     icon: 🎨
-  - title: Simpler I18n solution
-    details: With the built-in I18n solution, you can easily provide multi-language support for documents or components.
-    icon: 🌍
-  - title: Static site generation
-    details: In production, it automatically builds into static HTML files, which can be easily deployed anywhere.
-    icon: 🌈
-  - title: Providing multiple custom capabilities
-    details: Through its extension mechanism, you can easily extend theme UI and build process.
-    icon: 🔥
 ---
