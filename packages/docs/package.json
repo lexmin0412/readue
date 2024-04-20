@@ -1,6 +1,7 @@
 {
   "name": "@readue/docs",
   "version": "0.2.1",
+	"description": "Readue 文档",
   "private": true,
   "scripts": {
     "dev": "rspress dev",
