@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.2.4 (2024-04-21)
+
+
+### Features
+
+* **docs:** 完成中文文档骨架内容 ([908ce84](https://github.com/lexmin0412/readue/commit/908ce8427d91a7e850ea3a6fd182e730db0798d5))
+
+
+
+
+
 ## 0.2.3 (2024-04-20)
 
 
