@@ -14,11 +14,11 @@ export default defineConfig({
   },
   themeConfig: {
 		locales: [
-			{
-				lang: 'en',
-				label: 'English',
-				outlineTitle: 'On This Page',
-			},
+			// {
+			// 	lang: 'en',
+			// 	label: 'English',
+			// 	outlineTitle: 'On This Page',
+			// },
 			{
 				lang: 'zh',
 				label: '简体中文',
