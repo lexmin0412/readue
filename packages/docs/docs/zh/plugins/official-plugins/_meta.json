@@ -1,0 +1,22 @@
+[
+	{
+		"type": "file",
+		"name": "overview",
+		"label": "overview"
+	},
+	{
+		"type": "file",
+		"name": "block-base_info",
+		"label": "@readue/block-base_info"
+	},
+	{
+		"type": "file",
+		"name": "block-packages",
+		"label": "@readue/block-packages"
+	},
+	{
+		"type": "file",
+		"name": "block-star_history",
+		"label": "@readue/block-star_history"
+	}
+]

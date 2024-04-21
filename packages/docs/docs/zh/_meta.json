@@ -1,7 +1,12 @@
 [
-  {
-    "text": "guide",
-    "link": "/guide/start/introduction",
-    "activeMatch": "/guide/"
-  }
+	{
+		"text": "guide",
+		"link": "/guide/start/introduction",
+		"activeMatch": "/guide/"
+	},
+	{
+		"text": "plugins",
+		"link": "/plugins/mechanism/introduction",
+		"activeMatch": "/plugins/"
+	}
 ]

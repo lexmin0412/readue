@@ -1,0 +1,12 @@
+[
+	{
+		"type": "dir",
+		"name": "mechanism",
+		"label": "mechanism"
+	},
+	{
+		"type": "dir",
+		"name": "official-plugins",
+		"label": "official-plugins"
+	}
+]

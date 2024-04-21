@@ -14,5 +14,33 @@
   "quick-start": {
     "zh": "快速开始",
     "en": "Quick Start"
-  }
+  },
+	"mechanism": {
+		"zh": "机制",
+		"en": "Mechanism"
+	},
+	"plugins": {
+		"zh": "插件",
+		"en": "Plugins"
+	},
+	"official-plugins": {
+		"zh": "官方插件",
+		"en": "Official Plugins"
+	},
+	"overview": {
+		"zh": "总览",
+		"en": "Overview"
+	},
+	"write-a-plugin": {
+		"zh": "编写一个插件",
+		"en": "Write a Plugin"
+	},
+	"cli": {
+		"zh": "命令行工具",
+		"en": "CLI"
+	},
+	"usage":  {
+		"zh": "用法",
+		"en": "Usage"
+	}
 }

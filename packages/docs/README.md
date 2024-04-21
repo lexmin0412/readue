@@ -1,3 +1,3 @@
 # @readue/docs
 
-undefined
+Readue 官方文档。

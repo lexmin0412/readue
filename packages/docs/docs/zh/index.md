@@ -7,8 +7,8 @@ hero:
   tagline: 简单、快速、灵活自定义
   actions:
     - theme: brand
-      text: 快速开始
-      link: /guide/start/quick-start
+      text: 介绍
+      link: /guide/start/introduction
     - theme: alt
       text: Github
       link: https://github.com/lexmin0412/readue
