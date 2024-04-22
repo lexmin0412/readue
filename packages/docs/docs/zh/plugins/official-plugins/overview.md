@@ -5,8 +5,11 @@
 官方插件主要包括：
 
 - [@readue/block-base_info](./block-base_info.md) 基本信息块插件
-- [@readue/block-packages]('./block-packages.md) Monorepo 子包信息插件
+- [@readue/block-env_requirement](./block-env_requirement.md) 环境要求块插件。
+- [@readue/block-packages](./block-packages.md) Monorepo 子包信息插件
 - [@readue/block-star_history](./block-star_history.md) 星标历史插件
+- [@readue/block-techstack](./block-techstack.md) 技术栈块插件
+- [@readue/block-tree](./block-tree.md) 文件树块插件
 
 所有的官方插件都在 [Readue 主仓库](https://github.com/lexmin0412/readue)中维护，你可以在 [packages 目录](https://github.com/lexmin0412/readue/tree/main/packages)下找到它们。
 

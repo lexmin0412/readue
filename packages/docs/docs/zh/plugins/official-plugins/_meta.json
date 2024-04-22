@@ -11,6 +11,11 @@
 	},
 	{
 		"type": "file",
+		"name": "block-env_requirement",
+		"label": "@readue/block-env_requirement"
+	},
+	{
+		"type": "file",
 		"name": "block-packages",
 		"label": "@readue/block-packages"
 	},
@@ -18,5 +23,15 @@
 		"type": "file",
 		"name": "block-star_history",
 		"label": "@readue/block-star_history"
+	},
+	{
+		"type": "file",
+		"name": "block-techstack",
+		"label": "@readue/block-techstack"
+	},
+	{
+		"type": "file",
+		"name": "block-tree",
+		"label": "@readue/block-tree"
 	}
 ]
