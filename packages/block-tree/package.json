@@ -1,6 +1,6 @@
 {
   "name": "@readue/block-tree",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Readue 文件树块插件。",
   "keywords": [
     "readue"
@@ -29,10 +29,10 @@
     "ts": "ts-node src/",
     "prepublishOnly": "npm run build"
   },
-	"publishConfig": {
-		"access": "public",
-		"registry": "https://registry.npmjs.org/"
-	},
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "bugs": {
     "url": "https://github.com/lexmin0412/readue/issues"
   },

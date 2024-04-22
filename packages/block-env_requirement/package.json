@@ -1,6 +1,6 @@
 {
   "name": "@readue/block-env_requirement",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Readue 环境要求块插件。",
   "keywords": [
     "readue"
@@ -17,10 +17,10 @@
     "es",
     "lib"
   ],
-	"publishConfig": {
-		"access": "public",
-		"registry": "https://registry.npmjs.org/"
-	},
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lexmin0412/readue.git"

@@ -1,6 +1,6 @@
 {
   "name": "@readue/config",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Readue 的配置包",
   "keywords": [
     "readue"
