@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.4 (2024-04-22)
+
+
+### Features
+
+* **docs:** 补充新增的官方插件文档 ([3b3f1db](https://github.com/lexmin0412/readue/commit/3b3f1db5ff0b20a5fe1a7d38ba67093e30b38118))
+
+
+
+
+
 ## 0.3.3 (2024-04-22)
 
 **Note:** Version bump only for package @readue/app
