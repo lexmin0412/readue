@@ -1,0 +1,52 @@
+{
+  "name": "@readue/block-tree",
+  "version": "0.2.4",
+  "description": "Readue 文件树块插件。",
+  "keywords": [
+    "readue"
+  ],
+  "author": "lexmin0412 <zhangle_dev@outlook.com>",
+  "homepage": "https://github.com/lexmin0412/readue#readme",
+  "license": "ISC",
+  "main": "./lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "es",
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lexmin0412/readue.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/block-tree.test.js",
+    "build:commonjs": "rimraf lib && tsc --target es5 --outDir lib --module commonjs --declaration",
+    "build:es": "rimraf es && tsc --target es6 --outDir es --module es6",
+    "build": "npm run build:commonjs && npm run build:es",
+    "ts": "ts-node src/",
+    "prepublishOnly": "npm run build"
+  },
+	"publishConfig": {
+		"access": "public",
+		"registry": "https://registry.npmjs.org/"
+	},
+  "bugs": {
+    "url": "https://github.com/lexmin0412/readue/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "types": "./lib/index.d.ts",
+  "jsnext:main": "./es/index.js",
+  "module": "./es/index.js",
+  "dependencies": {
+    "@readue/config": "workspace:^",
+    "tree-node-cli": "^1.6.0"
+  }
+}

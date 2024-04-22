@@ -23,6 +23,8 @@ module.exports = {
 		list: [
 			"@readue/block-base_info",
 			"@readue/block-packages",
+			"@readue/block-tree",
+			"@readue/block-env_requirement",
 			"@readue/block-star_history",
 		]
 	}

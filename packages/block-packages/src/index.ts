@@ -32,9 +32,13 @@ export default function (_readueConfig: ReadueConfig, pkgJson: PackageJson, opti
 		const subPkgJson = JSON.parse(
 			fs.readFileSync(path.resolve(subDir, "package.json")).toString()
 		);
-		content.push(
-			`|[${subPkgJson.name}](https://www.npmjs.com/package/${subPkgJson.name})|![version](https://img.shields.io/npm/v/${subPkgJson.name})  ![downloads-month](https://img.shields.io/npm/dm/${subPkgJson.name})|${subPkgJson.description}|`
-		);
+		if (subPkgJson.private) {
+			content.push(`|${subPkgJson.name}|私有包, 未发布|${subPkgJson.description}|`)
+		} else {
+			content.push(
+				`|[${subPkgJson.name}](https://www.npmjs.com/package/${subPkgJson.name})|![version](https://img.shields.io/npm/v/${subPkgJson.name})  ![downloads-month](https://img.shields.io/npm/dm/${subPkgJson.name})|${subPkgJson.description}|`
+			);
+		}
 	});
 
 	return {
