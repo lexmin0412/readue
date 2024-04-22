@@ -49,6 +49,7 @@
     "@readue/block-env_requirement": "workspace:*",
     "@readue/block-packages": "workspace:*",
     "@readue/block-star_history": "workspace:*",
-    "@readue/block-techstack": "workspace:*"
+    "@readue/block-techstack": "workspace:*",
+    "@readue/block-tree": "workspace:*"
   }
 }
