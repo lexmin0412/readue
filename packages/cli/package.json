@@ -1,6 +1,6 @@
 {
 	"name": "@readue/cli",
-	"version": "0.3.1",
+	"version": "0.3.2",
 	"description": "Readue 命令行接口",
 	"bin": {
 		"readue": "./bin/readue.js",
