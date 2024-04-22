@@ -11,12 +11,18 @@ importers:
       '@readue/block-base_info':
         specifier: workspace:*
         version: link:packages/block-base_info
+      '@readue/block-env_requirement':
+        specifier: workspace:*
+        version: link:packages/block-env_requirement
       '@readue/block-packages':
         specifier: workspace:*
         version: link:packages/block-packages
       '@readue/block-star_history':
         specifier: workspace:*
         version: link:packages/block-star_history
+      '@readue/block-techstack':
+        specifier: workspace:*
+        version: link:packages/block-techstack
     devDependencies:
       '@eat-fish/changelog':
         specifier: ^1.0.5
@@ -121,6 +127,28 @@ importers:
         specifier: ^5.4.5
         version: 5.4.5
 
+  packages/block-env_requirement:
+    dependencies:
+      '@readue/config':
+        specifier: workspace:*
+        version: link:../config
+      pkg-types:
+        specifier: ^1.1.0
+        version: 1.1.0
+    devDependencies:
+      '@types/node':
+        specifier: ^20.12.7
+        version: 20.12.7
+      rimraf:
+        specifier: ^5.0.5
+        version: 5.0.5
+      ts-node:
+        specifier: ^10.9.2
+        version: 10.9.2(@types/node@20.12.7)(typescript@5.4.5)
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+
   packages/block-packages:
     dependencies:
       '@readue/config':
@@ -144,6 +172,28 @@ importers:
         version: 5.4.5
 
   packages/block-star_history:
+    dependencies:
+      '@readue/config':
+        specifier: workspace:^
+        version: link:../config
+      pkg-types:
+        specifier: ^1.1.0
+        version: 1.1.0
+    devDependencies:
+      '@types/node':
+        specifier: ^20.12.7
+        version: 20.12.7
+      rimraf:
+        specifier: ^5.0.5
+        version: 5.0.5
+      ts-node:
+        specifier: ^10.9.2
+        version: 10.9.2(@types/node@20.12.7)(typescript@5.4.5)
+      typescript:
+        specifier: ^5.4.5
+        version: 5.4.5
+
+  packages/block-techstack:
     dependencies:
       '@readue/config':
         specifier: workspace:^

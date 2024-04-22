@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "pnpm --filter=@readue/* run build",
     "dev:app": "pnpm --filter=@readue/app run dev",
-		"dev:docs": "pnpm --filter=@readue/docs run dev",
+    "dev:docs": "pnpm --filter=@readue/docs run dev",
     "ts": "ts-node src/",
     "ci:version": "lerna version patch --yes --conventional-commits",
     "ci:publish": "lerna publish from-package --yes"
@@ -24,6 +24,10 @@
     "rimraf": "^5.0.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "pnpm": ">=8.0.0"
   },
   "repository": {
     "type": "git",
@@ -42,7 +46,9 @@
   },
   "dependencies": {
     "@readue/block-base_info": "workspace:*",
+    "@readue/block-env_requirement": "workspace:*",
     "@readue/block-packages": "workspace:*",
-    "@readue/block-star_history": "workspace:*"
+    "@readue/block-star_history": "workspace:*",
+    "@readue/block-techstack": "workspace:*"
   }
 }
