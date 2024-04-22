@@ -47,7 +47,7 @@ module.exports = {
 }
 ```
 
-它使用了 `@readue/block-base_info`、`@readue/block-packages` 和 `@readue/block-star_history 插件，Readue 会在运行过程中依次执行这些插件，并将它们返回的内容拼接起来，最终生成 README。
+它使用了 `@readue/block-base_info`、`@readue/block-packages` 和 `@readue/block-star_history` 插件，Readue 会在运行过程中依次执行这些插件，并将它们返回的内容拼接起来，最终生成 README。
 
 当然，你也可以自定义自己的插件，来实现官方插件没有覆盖的需求。
 ## 使用方式
