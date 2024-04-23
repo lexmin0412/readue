@@ -1,6 +1,6 @@
 {
   "name": "@readue/docs",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "description": "Readue 文档",
   "private": true,
   "scripts": {
