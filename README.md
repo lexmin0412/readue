@@ -16,24 +16,18 @@ README 生成器。
 |[@readue/block-star_history](https://www.npmjs.com/package/@readue/block-star_history)|![version](https://img.shields.io/npm/v/@readue/block-star_history)  ![downloads-month](https://img.shields.io/npm/dm/@readue/block-star_history)|Readue Star History 块插件|
 |[@readue/block-techstack](https://www.npmjs.com/package/@readue/block-techstack)|![version](https://img.shields.io/npm/v/@readue/block-techstack)  ![downloads-month](https://img.shields.io/npm/dm/@readue/block-techstack)|Readue 技术栈块插件。|
 |[@readue/block-tree](https://www.npmjs.com/package/@readue/block-tree)|![version](https://img.shields.io/npm/v/@readue/block-tree)  ![downloads-month](https://img.shields.io/npm/dm/@readue/block-tree)|Readue 文件树块插件。|
-|[@readue/cli](https://www.npmjs.com/package/@readue/cli)|![version](https://img.shields.io/npm/v/@readue/cli)  ![downloads-month](https://img.shields.io/npm/dm/@readue/cli)|Readue 命令行接口|
+|[@readue/cli](https://www.npmjs.com/package/@readue/cli)|![version](https://img.shields.io/npm/v/@readue/cli)  ![downloads-month](https://img.shields.io/npm/dm/@readue/cli)|Readue 命令行接口。|
 |[@readue/config](https://www.npmjs.com/package/@readue/config)|![version](https://img.shields.io/npm/v/@readue/config)  ![downloads-month](https://img.shields.io/npm/dm/@readue/config)|Readue 的配置包|
 |@readue/docs|私有包, 未发布|Readue 文档|
 
 ## 项目结构
 
 ```bash
-readu
+readue
 ├── CHANGELOG.md
 ├── README.md
 ├── changelog.config.js
-├── es
-│   ├── packages
-│   └── src
 ├── lerna.json
-├── lib
-│   ├── packages
-│   └── src
 ├── package.json
 ├── packages
 │   ├── api
@@ -49,7 +43,6 @@ readu
 │   └── docs
 ├── pnpm-lock.yaml
 ├── pnpm-workspace.yaml
-├── test
 └── tsconfig.json
 ```
 

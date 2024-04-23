@@ -1,9 +1,11 @@
-import type { PackageJson } from 'pkg-types'
-import { ReadueConfig } from '@readue/config'
+import { ReadueBlockFunction } from '@readue/config'
 import * as fs from 'fs'
 import * as path from 'path'
 
-export default function (_readueConfig: ReadueConfig, pkgJson: PackageJson, options: {
+/**
+ * 块插件函数
+ */
+const generator: ReadueBlockFunction =  function (_readueConfig, _pkgJson, options: {
 	cwd: string
 } = {
 	cwd: process.cwd()
@@ -11,18 +13,17 @@ export default function (_readueConfig: ReadueConfig, pkgJson: PackageJson, opti
 
 	const {cwd} = options
 
-	let content: string[] = []
+	const content: string[] = []
 
 	const packages = fs.readdirSync(path.resolve(cwd, "./packages"));
 
 	if (packages?.length) {
-		content = [
-			...content,
+		content.push(
 			"## Packages",
 			"",
 			"|子包|信息|说明|",
 			"|---|---|---|",
-		];
+		)
 	}
 
 	packages.forEach((item) => {
@@ -48,3 +49,5 @@ export default function (_readueConfig: ReadueConfig, pkgJson: PackageJson, opti
 		]
 	}
 }
+
+export default generator
