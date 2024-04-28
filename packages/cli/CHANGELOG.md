@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.3.6 (2024-04-28)
+
+
+### Features
+
+* **docs:** 新增夜间模式 logo ([7bc04c5](https://github.com/lexmin0412/readue/commit/7bc04c5b73679e343b67d735e24a1b2a158fd943))
+
+
+
+
+
 ## 0.3.5 (2024-04-23)
 
 **Note:** Version bump only for package @readue/cli
