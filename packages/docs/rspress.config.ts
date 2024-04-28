@@ -10,7 +10,7 @@ export default defineConfig({
 	icon: "https://lexmin0412.github.io/readue/rspress-icon.png",
   logo: {
 		light: "https://lexmin.oss-cn-hangzhou.aliyuncs.com/statics/readue/logo.png",
-		dark: "https://lexmin.oss-cn-hangzhou.aliyuncs.com/statics/readue/logo.png",
+		dark: "https://lexmin.oss-cn-hangzhou.aliyuncs.com/statics/readue/logo_dark.png",
   },
   themeConfig: {
 		locales: [
