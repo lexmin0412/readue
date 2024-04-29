@@ -1,7 +1,7 @@
 import * as path from "path";
 import * as fs from "fs";
-import { ReadueConfig } from "../types";
-import { DEFAULT_INSERT_PLACEHOLDER, SUPPORTED_FILE_NAMES, getDefaultConfig, WRITE_MODE } from '@readue/config';
+import { ReadueConfig } from '@readue/config'
+import { DEFAULT_INSERT_PLACEHOLDER, SUPPORTED_FILE_NAMES, getDefaultConfig, WRITE_MODE } from '@readue/config'
 
 export const writeReadme = (newLines: string[]) => {
 	/**
@@ -50,14 +50,16 @@ export const writeReadme = (newLines: string[]) => {
 		}
 	}
 
-	if (config.mode === WRITE_MODE.COVER || !fs.existsSync(config.templateFile)) {
+	const templateFilePath = path.resolve(process.cwd(), config.templateFile as string);
+	if (config.mode === WRITE_MODE.COVER || !fs.existsSync(templateFilePath)) {
 		// 如果是覆盖模式或者模板文件不存在，则直接写入内容
 		writeFile(newLines);
 		return;
 	}
 
+
 	// 否则处理内容插入
-	const existedContent = fs.readFileSync(config.templateFile, "utf-8");
+	const existedContent = fs.readFileSync(config.templateFile as string, "utf-8");
 	const lines = existedContent.split("\n");
 	// 在已存在内容中找到占位符，替换为生成的内容
 	const placeholderIndex = lines.findIndex((line) =>

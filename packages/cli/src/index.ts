@@ -3,8 +3,7 @@ import * as fs from 'fs'
 import figlet from 'figlet'
 import pc from 'picocolors'
 import { program } from 'commander'
-import { gen } from './commands/gen'
-import { create } from './commands/create'
+import { gen, create, init } from './commands'
 
 const content = fs.readFileSync(path.resolve(__dirname, '../package.json')).toString()
 
@@ -27,6 +26,7 @@ console.log(pc.green(artText))
 console.log(`> readue ${process.argv[2]}
 `)
 
+// 生成 README
 program
 	.version(pkgJson.version)
 	.command('gen')
@@ -40,6 +40,20 @@ program
 		}
 	})
 
+// 初始化 Readue 配置
+program
+	.command('init')
+	.description('初始化 Readue 配置')
+	.action(async() => {
+		try {
+			await init()
+		} catch (error) {
+			console.error(error)
+			process.exit(1)
+		}
+	})
+
+// 创建 Readue 插件
 program
 	.command('create')
 	.description('创建 Readue 插件')
