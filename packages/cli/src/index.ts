@@ -43,9 +43,9 @@ program
 program
 	.command('create')
 	.description('创建 Readue 插件')
-	.action(() => {
+	.action(async() => {
 		try {
-			create()
+			await create()
 		} catch (error) {
 			console.error(error)
 			process.exit(1)

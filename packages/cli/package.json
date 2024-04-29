@@ -52,6 +52,7 @@
 	"jsnext:main": "./es/index.js",
 	"module": "./es/index.js",
 	"dependencies": {
+		"@lexmin0412/tpc": "^2.3.0",
 		"@readue/api": "workspace:*",
 		"@readue/config": "workspace:*",
 		"@toolkit-fe/request": "^0.1.22",
