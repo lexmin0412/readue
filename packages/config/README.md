@@ -20,6 +20,26 @@ import { getDefaultConfig } from '@readue/config';
 getDefaultConfig()
 ```
 
+### `getUserConfig`
+
+获取用户自定义配置。
+
+```ts
+import { getUserConfig } from '@readue/config';
+
+getUserConfig()
+```
+
+### `getConfig`
+
+获取配置，当用户配置为空时，会使用 Readue 默认配置。
+
+```ts
+import { getConfig } from '@readue/config';
+
+getConfig()
+```
+
 ### `ReadueConfig`
 
 配置对象类型定义。
@@ -28,16 +48,6 @@ getDefaultConfig()
 import { ReadueConfig } from '@readue/config';
 
 const config: ReadueConfig = getDefaultConfig()
-```
-
-### `SUPPORTED_FILE_NAMES`
-
-支持的配置文件名列表。
-
-```ts
-import { SUPPORTED_FILE_NAMES } from '@readue/config';
-
-console.log(SUPPORTED_FILE_NAMES) // ['config.js','config.cjs']
 ```
 
 ### `WRITE_MODE`
