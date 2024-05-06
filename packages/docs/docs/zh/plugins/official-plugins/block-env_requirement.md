@@ -15,7 +15,7 @@ pnpm add @readue/block-env_requirement
 该插件开箱即用，无任何配置。
 
 ```js
-// .readue/config.js
+// readue.config.ts
 module.exports = {
 	blocks: {
 		type: 'custom',  // 只有 type 为 custom 时，list 中的块插件才会生效
