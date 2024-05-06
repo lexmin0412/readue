@@ -1,6 +1,6 @@
 import * as path from "path";
 import * as fs from "fs";
-import { DEFAULT_INSERT_PLACEHOLDER, getDefaultConfig, getUserConfig, ReadueConfig, WRITE_MODE } from '@readue/config'
+import { DEFAULT_INSERT_PLACEHOLDER, getDefaultConfig, readUserConfig, ReadueConfig, WRITE_MODE } from '@readue/config'
 
 export const writeReadme = (newLines: string[]) => {
 	/**
@@ -15,33 +15,33 @@ export const writeReadme = (newLines: string[]) => {
 	};
 
 	let config: ReadueConfig = getDefaultConfig()
-	const userConfig = getUserConfig();
-	if (userConfig) {
+	const userConfigRes = readUserConfig();
+	if (userConfigRes?.config) {
 		// 存在则读取内容与默认配置合并
 		config = {
 			...config,
-			...userConfig,
+			...userConfigRes.config,
 		};
 		// 把自定义配置中的相对路径转换成绝对路径
-		if (userConfig.templateFile) {
+		if (userConfigRes.config.templateFile) {
 			config = {
 				...config,
 				templateFile: path.resolve(
-					process.cwd(),
-					".readue",
-					userConfig.templateFile
+					userConfigRes.filepath,
+					'..',
+					userConfigRes.config.templateFile
 				),
 			};
 		}
 		if (config.outputFile) {
 			config = {
 				...config,
-				outputFile: path.resolve(process.cwd(), ".readue", userConfig.outputFile),
+				outputFile: path.resolve(userConfigRes.filepath, '..', userConfigRes.config.outputFile),
 			};
 		}
 	}
 
-	const templateFilePath = path.resolve(process.cwd(), config.templateFile as string);
+	const templateFilePath = path.resolve(config.templateFile as string)
 	if (config.mode === WRITE_MODE.COVER || !fs.existsSync(templateFilePath)) {
 		// 如果是覆盖模式或者模板文件不存在，则直接写入内容
 		writeFile(newLines);
