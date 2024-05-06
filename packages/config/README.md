@@ -20,14 +20,14 @@ import { getDefaultConfig } from '@readue/config';
 getDefaultConfig()
 ```
 
-### `getUserConfig`
+### `readUserConfig`
 
-获取用户自定义配置。
+读取用户自定义配置。
 
 ```ts
-import { getUserConfig } from '@readue/config';
+import { readUserConfig } from '@readue/config';
 
-getUserConfig()
+readUserConfig()
 ```
 
 ### `getConfig`

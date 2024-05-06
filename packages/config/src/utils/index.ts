@@ -18,9 +18,9 @@ export const getDefaultConfig = (cwd: string = process.cwd()): ReadueConfig => {
  * 获取用户配置
  * @param cwd 工作目录 默认为 process.cwd()
  */
-export const getUserConfig = (cwd: string = process.cwd()) => {
+export const readUserConfig = (cwd: string = process.cwd()) => {
 	const configContent = cosmiconfigSync('readue').search(cwd);
-	return configContent?.config
+	return configContent
 }
 
 /**
@@ -28,7 +28,7 @@ export const getUserConfig = (cwd: string = process.cwd()) => {
  */
 export const getConfig = (cwd: string = process.cwd()): ReadueConfig => {
 	try {
-		return getUserConfig(cwd) || getDefaultConfig();
+		return readUserConfig(cwd)?.config || getDefaultConfig();
   } catch (error) {
     console.error('读取配置失败，将使用默认配置:', error);
     return getDefaultConfig();
