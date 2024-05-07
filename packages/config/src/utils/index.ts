@@ -1,7 +1,6 @@
-import * as fs from 'fs'
 import * as path from 'path'
-import { SUPPORTED_FILE_NAMES } from '../constants'
 import { ReadueConfig } from "../types"
+import { cosmiconfigSync } from 'cosmiconfig'
 
 /**
  * 获取默认配置
@@ -16,18 +15,22 @@ export const getDefaultConfig = (cwd: string = process.cwd()): ReadueConfig => {
 }
 
 /**
+ * 获取用户配置
+ * @param cwd 工作目录 默认为 process.cwd()
+ */
+export const readUserConfig = (cwd: string = process.cwd()) => {
+	const configContent = cosmiconfigSync('readue').search(cwd);
+	return configContent
+}
+
+/**
  * 获取配置
  */
 export const getConfig = (cwd: string = process.cwd()): ReadueConfig => {
-	const checkFiles = SUPPORTED_FILE_NAMES.map((item) => {
-		return path.resolve(process.cwd(), './.readue', item)
-	})
-
-	const configFilePath = checkFiles.find((item) => {
-		return fs.existsSync(item)
-	})
-	if (!configFilePath) {
-		return getDefaultConfig()
-	}
-	return require(configFilePath)
+	try {
+		return readUserConfig(cwd)?.config || getDefaultConfig();
+  } catch (error) {
+    console.error('读取配置失败，将使用默认配置:', error);
+    return getDefaultConfig();
+  }
 }

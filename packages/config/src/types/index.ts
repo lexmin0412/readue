@@ -2,7 +2,7 @@ export interface ReadueConfig {
 	/**
 	 * 写入模式 cover-覆盖全内容(默认) insert-在占位符处插入内容
 	 */
-	mode: 'cover',
+	mode: 'cover' | 'insert'
 	/**
 	 * 插入占位符 当 mode 为 insert 时生效
 	 */
@@ -10,7 +10,7 @@ export interface ReadueConfig {
 	/**
 	 * 模板文件 - 相对与配置文件的路径 mode 为 insert 时必传
 	 */
-	templateFile: string
+	templateFile?: string
 	/**
 	 * 输出文件路径 - 相对与配置文件的路径
 	 */

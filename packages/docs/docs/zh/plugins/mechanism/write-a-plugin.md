@@ -80,7 +80,7 @@ export default function (
 在 .readue/config.js 中通过 `blocks` 配置项注入插件：
 
 ```js
-// .readue/config.js
+// readue.config.ts
 module.exports = {
 	/**
 	 * 自定义块配置

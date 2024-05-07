@@ -1,12 +1,4 @@
 /**
- * 支持的配置文件名
- */
-export const SUPPORTED_FILE_NAMES = [
-	'config.js',
-	'config.cjs'
-]
-
-/**
  * 内容写入模式
  */
 export const WRITE_MODE = {
