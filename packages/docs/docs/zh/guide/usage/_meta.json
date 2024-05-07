@@ -3,5 +3,10 @@
 		"type": "file",
 		"name": "cli",
 		"label": "cli"
+	},
+	{
+		"type": "file",
+		"name": "api",
+		"label": "Node.js API"
 	}
 ]

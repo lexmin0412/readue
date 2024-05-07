@@ -11,7 +11,7 @@ npm install -g @readue/cli
 在项目根目录下执行以下命令，即可生成 README 文件。
 
 ```bash
-readue
+readue gen
 ```
 
 ## 配置
