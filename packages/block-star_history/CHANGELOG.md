@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.1 (2024-05-17)
+
+
+### Bug Fixes
+
+* **cli:** 修复 init 命令写入配置文件路径错误的问题 ([6ff30a7](https://github.com/lexmin0412/readue/commit/6ff30a727cc2c1b3b21dcaeffdb2902a40e91238))
+
+
+
+
+
 # 0.4.0 (2024-05-17)
 
 **Note:** Version bump only for package @readue/block-star_history
