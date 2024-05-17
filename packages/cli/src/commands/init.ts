@@ -16,7 +16,7 @@ export const init = async() => {
 		{
 			type: 'input',
 			name: 'outputFile',
-			default: './README.md',
+			default: './../README.md',
 			message: '输出文件路径'
 		}
 	])
@@ -95,8 +95,14 @@ const formattdConfigFileContent = await prettier.format(
 )
 
 	const pkgJson = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), './package.json'), 'utf-8'))
-	const configFilePath = path.resolve(process.cwd(), `./.readue/config.${pkgJson.type === 'module' ? 'cjs': 'js'}`)
-	const templateFilePath = path.resolve(process.cwd(), configJson.templateFile as string)
+
+	const configDir = path.resolve(process.cwd(), './.config')
+	if (!fs.existsSync(configDir)) {
+		fs.mkdirSync(configDir)
+	}
+	const configFilePath = path.resolve(configDir, `readuerc.${pkgJson.type === 'module' ? 'cjs': 'js'}`)
+	// 这里要特别注意 模板文件路径是基于配置文件的
+	const templateFilePath = path.resolve(configDir, configJson.templateFile as string)
 	fs.writeFileSync(configFilePath, formattdConfigFileContent, 'utf-8')
 	fs.writeFileSync(templateFilePath, templateFileContent, 'utf-8')
 }
