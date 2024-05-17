@@ -1,6 +1,4 @@
-import { loadBlock } from "../utils";
-import { getConfig } from "@readue/config"
-import type { ReadueBlockFunction } from '@readue/config'
+import { Generator } from "../utils";
 
 /**
  * 判断是否是私有包
@@ -52,23 +50,7 @@ export const generate4SinglePkg = (pkgJson: Record<string, unknown>) => {
  * 生成 Monorepo 的 README 内容
  * @param pkgJson 仓库的 package.json 内容
  */
-export const generate4Monorepo = (pkgJson: Record<string, any>, cwd: string) => {
-	let readmeLines: string[] = []
-	const config = getConfig(cwd)
-
-	// 根据 列表生成 README.md 中的信息
-	const blockFuncs = loadBlock(process.cwd())
-	blockFuncs?.map((funcItem: ReadueBlockFunction)=>{
-		const { name, content } = funcItem(config, pkgJson)
-		console.log(`[info] 执行块插件 ${name} - 开始`);
-		readmeLines = [
-			...readmeLines,
-			...content,
-			''
-		]
-		console.log(`[info] 执行块插件 ${name} - 结束`);
-		console.log('')
-	})
-
-	return readmeLines;
+export const generate4Monorepo = (_pkgJson: Record<string, any>, cwd: string) => {
+	const generator = new Generator(cwd)
+	return  generator.loadBlocks().gen()
 };
