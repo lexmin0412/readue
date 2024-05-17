@@ -1,6 +1,6 @@
 {
   "name": "@readue/block-env_requirement",
-  "version": "0.3.8",
+  "version": "0.4.0",
   "description": "Readue 环境要求块插件。",
   "keywords": [
     "readue"
