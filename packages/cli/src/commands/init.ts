@@ -20,7 +20,6 @@ export const init = async() => {
 			message: '输出文件路径'
 		}
 	])
-	console.log(answers)
 
 	const configJson: ReadueConfig = {
 		mode: answers.mode,
