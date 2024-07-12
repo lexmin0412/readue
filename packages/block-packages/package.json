@@ -1,6 +1,6 @@
 {
   "name": "@readue/block-packages",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Readue Monorepo 子包信息块",
   "keywords": [
     "readue"
