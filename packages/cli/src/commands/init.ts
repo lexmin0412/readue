@@ -1,7 +1,7 @@
 import * as fs from 'fs'
 import * as path from 'path'
 import inquirer from 'inquirer'
-import { ReadueConfig } from '@readue/config'
+import { ReadueConfig, WRITE_MODE } from '@readue/config'
 import * as prettier from 'prettier'
 
 export const init = async() => {
@@ -33,7 +33,7 @@ export const init = async() => {
 		}
 	}
 
-	if (answers.mode === 'insert') {
+	if (answers.mode === WRITE_MODE.INSERT) {
 		const insertConfig = await inquirer.prompt([
 			{
 				type: 'input',
@@ -102,7 +102,11 @@ const formattdConfigFileContent = await prettier.format(
 	}
 	const configFilePath = path.resolve(configDir, `readuerc.${pkgJson.type === 'module' ? 'cjs': 'js'}`)
 	// 这里要特别注意 模板文件路径是基于配置文件的
-	const templateFilePath = path.resolve(configDir, configJson.templateFile as string)
 	fs.writeFileSync(configFilePath, formattdConfigFileContent, 'utf-8')
-	fs.writeFileSync(templateFilePath, templateFileContent, 'utf-8')
+
+	// 嵌入模式下，需要生成模板文件
+	if (configJson.mode === WRITE_MODE.INSERT && configJson.templateFile) {
+		const templateFilePath = path.resolve(configDir, configJson.templateFile as string)
+		fs.writeFileSync(templateFilePath, templateFileContent, 'utf-8')
+	}
 }
