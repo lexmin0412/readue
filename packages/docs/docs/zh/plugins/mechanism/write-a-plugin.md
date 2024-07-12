@@ -16,23 +16,29 @@ export default function (readueConfig, pkgJson) {
 }
 ```
 
-
 ## 初始化插件包
 
-我们按照如下步骤初始化一个插件包，命名为 `@readue/block-test`
+@readue/cli 提供了一键初始化自定义插件包的命令，方便开发者快速编写插件。
+
+首先确保你已经安装了 `@readue/cli`，如果没有安装，请执行如下命令：
+
+```shell
+npm install @readue/cli -g
+```
+
+切换到合适的目录，执行如下命令：
 
 ```bash
-# 初始化 package.json
-npm init -y
-# 全局安装 tpc（已安装用户请忽略）
-npm install @lexmin0412/tpc -g
-# 初始化一个 TypeScript 包的项目结构
-tpc init
+readue create test
 ```
+
+等待下面的过程执行完毕，插件就初始化成功了，你可以编辑 `src/index.ts` 来修改你的插件逻辑。
+
+![创建插件包](./create-plugin.png)
 
 ## 编写插件
 
-我们初始化一个 npm 包，然后在入口文件写入如下内容：
+在上一步中，我们已经初始化了插件包的整体结构，现在我们在入口文件 `src/index.ts` 替换为如下内容：
 
 ```ts
 import type { PackageJson } from "pkg-types";
@@ -73,11 +79,11 @@ export default function (
 }
 ```
 
-将上面编写的插件，发布到 npm 仓库中。
+这样我们就完成了一个子包列表信息插件的编码，然后我们将上面编写的插件，发布到 npm 仓库中。
 
 ## 使用插件
 
-在 .readue/config.js 中通过 `blocks` 配置项注入插件：
+在 `.readue/config.js` 中通过 `blocks` 配置项注入插件：
 
 ```js
 // readue.config.ts
@@ -91,3 +97,5 @@ module.exports = {
 	},
 };
 ```
+
+重新执行 `readue gen` 命令，就能在 READEME.md 中看到仓库的子包信息了。
